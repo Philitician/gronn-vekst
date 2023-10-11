@@ -1,17 +1,18 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "check": "pnpm dlx @biomejs/biome check ./",
-    "format": "pnpm dlx @biomejs/biome format ./ --write",
-    "lint": "turbo run lint"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.2.2",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@8.6.10",
-  "name": "gronn-vekst"
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"format:check": "pnpm dlx @biomejs/biome check ./",
+		"format:write": "pnpm dlx @biomejs/biome format ./ --write",
+		"lint": "biome lint ./",
+		"lint:apply": "biome lint --apply ./"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.2.2",
+		"tsconfig": "workspace:*",
+		"turbo": "latest"
+	},
+	"packageManager": "pnpm@8.6.10",
+	"name": "gronn-vekst"
 }
